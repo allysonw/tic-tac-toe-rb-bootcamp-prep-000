@@ -39,6 +39,10 @@ def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
 
+def input_to_index(input)
+  index -= 1
+end
+
 def turn_count(board)
   count = 0
   board.each do |space|
