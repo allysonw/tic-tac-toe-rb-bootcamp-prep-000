@@ -31,16 +31,16 @@ def full?(board)
   end
 end
 
+def input_to_index(input)
+  input.to_i - 1
+end
+
 def over?(board)
   full?(board) || draw?(board) || won?(board)
 end
 
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
-end
-
-def input_to_index(input)
-  input - 1
 end
 
 def turn_count(board)
