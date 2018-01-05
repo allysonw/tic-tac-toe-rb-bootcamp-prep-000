@@ -41,6 +41,14 @@ def turn_count(board)
   return count
 end
 
+def valid_move?(board, index)
+  if !index.between?(0,9)|| position_taken?(board, index)
+    return false
+  else
+    return true
+  end
+end
+
 def winner(board)
   winning_combo = won?(board)
 
