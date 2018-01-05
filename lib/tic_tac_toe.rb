@@ -35,6 +35,10 @@ def input_to_index(input)
   input.to_i - 1
 end
 
+def move(board, index, character = "X")
+  board[index.to_i] = character  
+end
+
 def over?(board)
   full?(board) || draw?(board) || won?(board)
 end
