@@ -40,7 +40,7 @@ def position_taken?(board, index)
 end
 
 def input_to_index(input)
-  (input.to_i) -= 1
+  input - 1
 end
 
 def turn_count(board)
