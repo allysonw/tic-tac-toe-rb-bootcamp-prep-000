@@ -43,8 +43,28 @@ def over?(board)
   full?(board) || draw?(board) || won?(board)
 end
 
+def play(board)
+  9.times do
+    turn(board)
+  end
+end
+
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
+end
+
+def turn(board)
+    puts "Please enter 1-9:"
+    input = gets.strip
+    index = input_to_index(input)
+
+    if valid_move?(board, index)
+      move(board, index, "X")
+      display_board(board)
+      return
+    else
+      turn(board)
+    end
 end
 
 def turn_count(board)
